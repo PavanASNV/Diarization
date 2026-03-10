@@ -65,3 +65,27 @@ Because audio models are computationally heavy, the hardware you choose signific
 ```bash
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu128
 pip install pyannote.audio soundfile numpy
+```
+
+**2. Run the Script**
+Simply update the `AUDIO_FILE` path variable in the script and execute:
+```bash
+python diarization.py
+```
+
+## 🤗 Hugging Face Integration
+
+This project relies on models hosted on the **Hugging Face Hub**. The `pyannote/speaker-diarization-3.1` model is a "gated" model, meaning you cannot download it anonymously. You must explicitly agree to the creator's terms of service before the code will run.
+
+### Authentication Steps:
+To run this code successfully, follow these steps:
+
+1. **Create an Account:** Go to [huggingface.co](https://huggingface.co/) and create a free account.
+2. **Accept the Terms:** You must visit **both** of the following links while logged in and click the "Agree and access repository" button:
+   * [pyannote/speaker-diarization-3.1](https://huggingface.co/pyannote/speaker-diarization-3.1)
+   * [pyannote/segmentation-3.0](https://huggingface.co/pyannote/segmentation-3.0)
+3. **Generate a Token:** Go to your Hugging Face Account Settings -> **Access Tokens** and create a new token (Read permissions are sufficient).
+4. **Update the Code:** Copy that token and paste it into the script as the `HF_TOKEN` variable:
+   ```python
+   HF_TOKEN = "your_generated_hf_token_here"
+   ```
