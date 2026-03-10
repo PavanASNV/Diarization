@@ -70,7 +70,7 @@ pip install pyannote.audio soundfile numpy
 **2. Run the Script**
 Simply update the `AUDIO_FILE` path variable in the script and execute:
 ```bash
-python diarization.py
+python diar_main.py
 ```
 
 ## 🤗 Hugging Face Integration
